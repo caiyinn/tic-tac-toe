@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tic-Tac-Toe</h1>
+    </header>
+
+    <div class="container">
+        <p id="grid-message">Enter a Value</p>
+        
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Enter Grid Size" >
+            <button id="go">Go</button>
+        </div>
+
+        <div class="score-board">
+            <div class="badge" id="playerX">X</div>
+            <div class="badge" id="playerO">O</div>
+            <span id="playerX-score">0</span>:<span id="playerO-score">0</span>
+        </div>
+        <div class="board">
+            
+        </div>
+        <div class="turn">
+            <p id="action-message">Player X Starts First!</p>
+        </div>
+
+        <div class = "gameover-buttons">
+            <button id="reset">Reset</button>
+            <button id="change">Change Size</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

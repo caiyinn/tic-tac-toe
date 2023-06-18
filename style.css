@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+
+*{
+    font-family: Asap, sans-serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #292C34;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: row;
+    margin: 20px auto;
+}
+
+#input{
+    color:black;
+    position: relative;
+    width: 60%;
+    height:20px;
+    left: 10px;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    margin: 10px;
+    transition: all 0.10s ease-in-out;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#go{
+    color:black;
+    position: relative;
+    left: 10px;
+    height: 20px;
+    width: 20%;
+    background-color: rgb(85, 255, 164);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-message{
+    display: none;
+    color: white;
+    position: relative;
+    top: 20px ;
+    font-size: 24px;
+}
+
+
+#go:hover{
+    cursor: pointer;
+    background-color: #45f195;
+}
+
+header{ 
+    background-color: white;
+    padding: 20px;
+}
+
+header>h1 {
+    color: #24272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
+    font-size: 50px;
+}
+
+.score-board{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border: 3px solid white;
+    width: 20%;
+    font-size: 46px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    position: relative;
+    bottom: 20px;
+}
+
+.badge{
+    background: #E2584D;
+    color: white;
+    font-size: 15px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
+    border-radius: 5px;
+}
+
+#playerX{
+    position: absolute;
+    width: fit-content;
+    top: 30px;
+    left: -15px;
+}
+
+#playerO{
+    position: absolute;
+    width: fit-content;
+    top: 30px;
+    right: -15px;   
+}
+
+.board{ 
+    width: 600px; 
+    height: 600px; 
+    display:grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    grid-gap: 3px; 
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.square-grid{
+    background-color: #4d5361;
+    transition: all 0.15s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.square-grid:hover{
+    background-color: #525862;
+    cursor: pointer;
+}
+
+.turn>p{
+    display: none;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#reset{
+    display: none;
+    color: black;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(85, 255, 164);
+    border-style: none;
+    margin: 10px;
+    transition: all 0.10s ease-in-out;
+}
+
+#reset:hover{
+    cursor: pointer;
+    background-color: #45f195;
+}
+
+#change{
+    display: none;
+    color: black;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(85, 255, 164);
+    border-style: none;
+    margin: 10px;
+    transition: all 0.10s ease-in-out;
+}
+
+#change:hover{
+    cursor: pointer;
+    background-color: #45f195;
+}
+
+.glow {
+    animation: glowing 2s linear infinite;
+}
+  
+@keyframes glowing {
+    0% {
+        color: #fff;
+        text-shadow: 0 0 5px #fff;
+    }
+    50% {
+        color: #9bd778;
+        text-shadow: 0 0 20px #9bd778, 0 0 30px #9bd778;
+    }
+    100% {
+        color: #fff;
+        text-shadow: 0 0 5px #fff;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .board{
+        width: 300px;
+        height: 300px;
+    }
+    .square-grid{
+        font-size: 30px;
+    }
+    .score-board{
+        width: 20%;
+        font-size: 30px;
+    }
+    .gameover-buttons{
+        display: flex;
+        flex-direction: row;
+    }
+    #reset{
+        width: 50%;
+    }
+    #change{
+        width: 50%;
+    }
+    #action-message{
+        font-size: 16px;
+    }
+    header>h1{
+        font-size: 30px;
+    }
+    #playerX{
+        position: absolute;
+        width: fit-content;
+        top: 20px;
+        left: -15px;
+    }
+    
+    #playerO{
+        position: absolute;
+        width: fit-content;
+        top: 20px;
+        right: -15px;   
+    }
+    #input{
+        width: 35%;
+    }
+    #go{
+        width: 15%;
+    }
+    #grid-message{
+        font-size: 16px;
+    }
+}
